@@ -1,8 +1,8 @@
 # HttpDebuggerCrackGUI
 HTTPDebugger Crack GUI using Fyne and Go
 
-## Screenshot
-![Screenshot](screenshot.png)
+## Preview 
+![Animation](https://github.com/Minagoroshi/HttpDebuggerCrackGUI/assets/91580790/4fe8a4a2-003e-4d53-a6d6-0f18b2955c66)
 
 ## How to use
 1. Download the latest release from [here](https://github.com/Minagoroshi/HttpDebuggerCrackGUI/releases)
