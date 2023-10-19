@@ -54,8 +54,6 @@ func getSerialNumber(appVersion string) string {
 
 	serialNumberStr := strconv.Itoa(int(serialNumber))
 
-	log.Println("Serial Number:", serialNumberStr)
-
 	return serialNumberStr
 }
 
