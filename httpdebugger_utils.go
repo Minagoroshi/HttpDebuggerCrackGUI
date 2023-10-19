@@ -77,15 +77,7 @@ func generateRandomBytes() (byte, byte, byte) {
 	return b[0], b[1], b[2]
 }
 
-func crack() {
-	av := getAppVersion()
-	sn := getSerialNumber(av)
-	key := createKey()
-
-	log.Println("App Version:", av)
-	log.Println("Serial Number:", sn)
-	log.Println("Key:", key)
-
+func writeKey(sn string, key string) {
 	k, _, err := registry.CreateKey(registry.CURRENT_USER, `SOFTWARE\MadeForNet\HTTPDebuggerPro`, registry.SET_VALUE)
 	if err != nil {
 		log.Fatal(err)
@@ -96,4 +88,19 @@ func crack() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+// returns app version, serial number and key
+func crack() (string, string, string) {
+	av := getAppVersion()
+	sn := getSerialNumber(av)
+	key := createKey()
+
+	log.Println("App Version:", av)
+	log.Println("Serial Number:", sn)
+	log.Println("Key:", key)
+
+	writeKey(sn, key)
+
+	return av, sn, key
 }

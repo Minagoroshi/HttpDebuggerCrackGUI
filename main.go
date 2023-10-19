@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/widget"
 	"log"
 )
@@ -9,13 +11,15 @@ import (
 func main() {
 	a := app.New()
 	w := a.NewWindow("HTTPDebugger Crack")
+	w.Resize(fyne.NewSize(300, 200))
+	w.SetFixedSize(true)
 
 	w.SetContent(widget.NewCard("HTTPDebugger Crack", "Crack HTTPDebugger", widget.NewButton("Crack", func() {
 		log.Println("Cracking...")
-		crack()
+		av, sn, k := crack()
+		dialog.ShowInformation("Cracked", "App Version: "+av+"\nSerial Number: "+sn+"\nKey: "+k, w)
 		log.Println("Done")
 	})))
 
 	w.ShowAndRun()
-
 }
