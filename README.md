@@ -4,7 +4,7 @@ HTTPDebugger Crack GUI using Fyne and Go
 ## Preview 
 ![Animation](https://github.com/Minagoroshi/HttpDebuggerCrackGUI/assets/91580790/5523413b-85bc-46d3-b1ba-5f91c9f11663)
 
-## What is HTTPDebugger
+## What is HTTP Debugger
 "HTTP Debugger is a proxy-less HTTP sniffer with clean UI and very easy to use. Doesn't change the browser's configuration for the proxy. Can display HTTP(s) traffic from any browser and JAVA/.NET apps."
 
 http://www.httpdebugger.com
