@@ -10,11 +10,11 @@ import (
 
 func main() {
 	a := app.New()
-	w := a.NewWindow("HTTPDebugger Crack")
+	w := a.NewWindow("HTTP Debugger Crack")
 	w.Resize(fyne.NewSize(300, 200))
 	w.SetFixedSize(true)
 
-	w.SetContent(widget.NewCard("HTTPDebugger Crack", "Crack HTTPDebugger", widget.NewButton("Crack", func() {
+	w.SetContent(widget.NewCard("Crack HTTP Debugger", "", widget.NewButton("Crack", func() {
 		log.Println("Cracking...")
 		av, sn, k := crack()
 		dialog.ShowInformation("Cracked", "App Version: "+av+"\nSerial Number: "+sn+"\nKey: "+k, w)
